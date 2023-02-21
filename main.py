@@ -60,6 +60,7 @@ def handle_text(message):
         bot.send_message(message.chat.id, reply)
         bot.send_media_group(message.chat.id, media=media_group)
     else: 
-        bot.send_message(message.chat.id, 'Извините, но такого товара не существует')
+        reply =  STRINGS['bot_answers']['aborted']
+        bot.send_message(message.chat.id, reply)
 
 bot.polling(none_stop=True, interval=0)
